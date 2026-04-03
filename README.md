@@ -2,7 +2,7 @@
 
 <img src="logo/glowina_logo_icon.png" width="120" alt="Glowina AI Logo" style="border-radius:20px; margin-bottom:10px;" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Outfit&weight=700&size=38&pause=1000&color=F0A8B1&center=true&vCenter=true&width=500&lines=✨+Glowina+AI;Your+Skin+Deserves+AI" alt="Glowina AI" />
+
 
 <p><b>Advanced AI-Powered Skincare Assistant — Mobile · Web · API</b></p>
 
