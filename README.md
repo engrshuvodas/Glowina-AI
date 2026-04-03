@@ -1,64 +1,79 @@
-# Glowina AI - AI Powered Skincare Assistant App
+<div align="center">
+  <h1>✨ Glowina AI</h1>
+  <p><strong>Advanced AI-Powered Skincare Assistant App</strong></p>
+  <p><i>Your personal dermatologist powered by blazing fast AI models.</i></p>
+  
+  <p>
+    <img src="https://img.shields.io/badge/Version-2.2-FFB6C1?style=for-the-badge&logo=appveyor" alt="Version" />
+    <img src="https://img.shields.io/badge/Flutter-%3E%3D3.0.0-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter" />
+    <img src="https://img.shields.io/badge/Node.js-Backend-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+    <img src="https://img.shields.io/badge/Groq-Llama_3.3_70B-orange?style=for-the-badge&logo=fastapi" alt="Groq API" />
+    <img src="https://img.shields.io/badge/MongoDB-Powered-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+  </p>
+</div>
 
-**Version 2.2**
+---
 
-## What's New in v2.2
-- **Name Change:** The project is officially renamed to **Glowina AI**.
-- **About Interface System:** Added dedicated About icon and dialogs to easily track the app version (currently v2.2).
-- **Update Mechanism:** All future version summaries and newly added capabilities will be listed here and inside the About page to keep users updated.
+## 🚀 What's New in Version 2.2?
+- **Name Transformation**: Officially transitioned from GlowAI to **Glowina AI**.
+- **Integrated About System**: A dedicated central About UI inside both the Mobile and Web App (including dynamic versioning & changelog integration).
+- **Intelligent Engine Switch**: Swapped out the legacy GPT-3.5 integration for the **Groq API** running precisely on the **Llama-3.3-70b-versatile** model for incredibly fast, medically-inclined AI analysis interactions.
 
-A modern, premium mobile application that provides personalized AI skincare advice, complete with a Node.js Express backend and Flutter frontend.
+## 🛠️ Accurate Tech Stack (Real Data)
 
-## Tech Stack
-- **Frontend**: Flutter
-- **Backend**: Node.js (Express)
-- **Database**: MongoDB
-- **AI Integration**: OpenAI (gpt-3.5-turbo)
+**Frontend Application** 📱
+- **Framework**: Flutter SDK (v3.0.0+)
+- **Font & UI**: `google_fonts ^6.1.0`, `cupertino_icons`
+- **Network & Linking**: `http ^1.1.0` and `url_launcher ^6.2.1`
 
-## Folders
-- `backend/`: Node.js server to handle API calls to OpenAI and connect to MongoDB.
-- `frontend/`: Flutter app with premium UI for chat and product recommendations.
+**Backend Server** ⚙️
+- **Runtime**: Node.js
+- **Server Framework**: Express.js (`v4.18.2`)
+- **Database Wrapper**: MongoDB with Mongoose (`v7.5.0`)
+- **AI Integration Protocol**: OpenAI SDK (`v4.10.0`) wrapped around the **Groq Cloud API**.
 
-## Easy to Run Instructions
+## 📂 Project Structure
+- `backend/`: Node.js server handling sophisticated AI mapping (JSON formatting & doctor alerts) and MongoDB connections.
+- `frontend/`: Premium Flutter mobile client providing beautifully designed chat logic, symptom suggestions, and AI integrations.
+- `web-preview/`: A sleek, HTML/JS/CSS interactive web mockup to test AI engine responses dynamically on the browser.
 
-### 1. Backend Setup
-1. Verify that **Node.js** (v16+) and **MongoDB** are installed and running on your system.
-2. Open a terminal and navigate to the backend folder:
+---
+
+## 💻 Easy to Run Instructions
+
+### 1. Backend Server Setup
+1. Verify that **Node.js** and **MongoDB** are installed and running locally on your device.
+2. Open your terminal and change directory to the backend setup:
    ```bash
    cd backend
    ```
-3. Install dependencies:
+3. Install package connections precisely (Express, Mongoose, OpenAI SDK):
    ```bash
    npm install
    ```
-4. Configure Environment Variables:
-   - Open `backend/.env`
-   - Set your `OPENAI_API_KEY` to your valid OpenAI key.
-   - Adjust `MONGODB_URI` if necessary.
-5. Start the server:
+4. **Environment Variables Config:**
+   - Create or open the `backend/.env` file.
+   - **Crucial step**: Instead of OpenAI, we now strictly utilize Groq. Provide your **`GROQ_API_KEY`**.
+   - Optional: Adjust `MONGODB_URI` mapping if you don't map to `mongodb://localhost:27017/glowina_ai`.
+5. Launch your Node Server:
    ```bash
    npm start
    ```
-   *The server should run on http://localhost:5000*
+   *The Express Router should initiate successfully on http://localhost:5000*
 
-### 2. Frontend Setup
-1. Verify that **Flutter SDK** is installed and configured.
-2. Ensure you have an Android emulator running or a connected device.
-3. Open a new terminal and navigate to the frontend folder:
+### 2. Frontend Mobile Setup
+1. Verify the **Flutter SDK (>=3.0.0)** is initialized on your device alongside an Android Emulator/iOS Simulator.
+2. Open a separate terminal and head into the frontend folder:
    ```bash
    cd frontend
    ```
-4. If this is a fresh Flutter clone without the platform folders generated, initialize them:
-   ```bash
-   flutter create .
-   ```
-5. Fetch the flutter dependencies:
+3. Secure UI packages & project dependencies:
    ```bash
    flutter pub get
    ```
-6. Run the app:
+4. Trigger the app build:
    ```bash
    flutter run
    ```
 
-*(Note: In `api_service.dart`, the `baseUrl` is set to `http://10.0.2.2:5000`, which correctly routes traffic from an Android Emulator to your computer's localhost. If using iOS, change it to `http://127.0.0.1:5000` or `http://localhost:5000`)*
+*(Note: Under `api_service.dart`, verify that the `baseUrl` correlates with the emulator routing standard to `http://10.0.2.2:5000`. Switch it to `http://127.0.0.1:5000` or `http://localhost:5000` if validating over iOS Simulator/Web)*
