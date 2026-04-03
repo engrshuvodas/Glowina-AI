@@ -3,7 +3,8 @@ import 'package:http/http.dart' as http;
 
 class ApiService {
   // Use 10.0.2.2 for Android Emulator connecting to localhost, or change to suitable IP
-  static const String baseUrl = 'http://10.0.2.2:5000';
+  // Real device IP — Phone and PC must be on the same WiFi network
+  static const String baseUrl = 'http://192.168.1.3:5000';
 
   static Future<Map<String, dynamic>> askSkinProblem(String message) async {
     try {
