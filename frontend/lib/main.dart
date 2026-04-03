@@ -3,16 +3,16 @@ import 'theme/app_theme.dart';
 import 'screens/login_screen.dart';
 
 void main() {
-  runApp(const GlowAIApp());
+  runApp(const GlowinaAIApp());
 }
 
-class GlowAIApp extends StatelessWidget {
-  const GlowAIApp({super.key});
+class GlowinaAIApp extends StatelessWidget {
+  const GlowinaAIApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'GlowAI',
+      title: 'Glowina AI',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       home: const LoginScreen(),

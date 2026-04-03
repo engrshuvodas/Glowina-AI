@@ -85,7 +85,7 @@ class _ChatScreenState extends State<ChatScreen> {
               child: Icon(Icons.face_retouching_natural, color: AppTheme.white),
             ),
             SizedBox(width: 12),
-            Text('GlowAI Expert'),
+            Text('Glowina AI Expert'),
           ],
         ),
       ),

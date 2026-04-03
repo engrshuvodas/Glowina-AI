@@ -36,8 +36,32 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppTheme.white,
       appBar: AppBar(
-        title: const Text('GlowAI'),
+        title: const Text('Glowina AI'),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.info_outline),
+            onPressed: () {
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  title: const Text('About Glowina AI'),
+                  content: const Text(
+                    'Version: 2.2\n\n'
+                    'What\'s New:\n'
+                    '- Renamed to Glowina AI\n'
+                    '- Added About System & Version Info\n'
+                    '- Enhanced AI Chat capabilities'
+                  ),
+                  actions: [
+                    TextButton(
+                      onPressed: () => Navigator.pop(context),
+                      child: const Text('Close'),
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
           IconButton(
             icon: const Icon(Icons.person_outline),
             onPressed: () {},

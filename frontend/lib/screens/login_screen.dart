@@ -34,7 +34,7 @@ class LoginScreen extends StatelessWidget {
               ),
               const SizedBox(height: 32),
               Text(
-                'Welcome to GlowAI',
+                'Welcome to Glowina AI',
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.displayLarge,
               ),

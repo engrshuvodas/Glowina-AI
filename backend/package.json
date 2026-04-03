@@ -1,7 +1,7 @@
 {
-  "name": "glowai-backend",
+  "name": "glowina-ai-backend",
   "version": "1.0.0",
-  "description": "GlowAI Backend Server",
+  "description": "Glowina AI Backend Server",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

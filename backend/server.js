@@ -11,7 +11,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 5000;
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/glowai')
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/glowina_ai')
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
 
@@ -28,7 +28,7 @@ app.post('/ask', async (req, res) => {
       return res.status(400).json({ error: 'Message is required' });
     }
 
-    const systemPrompt = `You are a highly advanced AI dermatologist and skincare expert named GlowAI.
+    const systemPrompt = `You are a highly advanced AI dermatologist and skincare expert named Glowina AI.
 Analyze the user's input (which could be a skin problem, an ingredient list, weather conditions, or voice note) and provide a JSON response exactly like this:
 {
   "analysis": "Detailed explanation of their condition or the ingredients they sent",
@@ -72,5 +72,5 @@ Keep tips very practical and provide exactly 3 valid product recommendations. NE
 });
 
 app.listen(PORT, () => {
-  console.log(`GlowAI Backend running on http://localhost:${PORT}`);
+  console.log(`Glowina AI Backend running on http://localhost:${PORT}`);
 });

@@ -1,4 +1,11 @@
-# GlowAI - AI Powered Skincare Assistant App
+# Glowina AI - AI Powered Skincare Assistant App
+
+**Version 2.2**
+
+## What's New in v2.2
+- **Name Change:** The project is officially renamed to **Glowina AI**.
+- **About Interface System:** Added dedicated About icon and dialogs to easily track the app version (currently v2.2).
+- **Update Mechanism:** All future version summaries and newly added capabilities will be listed here and inside the About page to keep users updated.
 
 A modern, premium mobile application that provides personalized AI skincare advice, complete with a Node.js Express backend and Flutter frontend.
 

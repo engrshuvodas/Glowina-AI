@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GlowAI - Advanced Skincare Assistant</title>
+  <title>Glowina AI - Advanced Skincare Assistant</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
   <style>
@@ -162,7 +162,7 @@
     .products-carousel { display: flex; gap: 12px; overflow-x: auto; padding: 10px 0; scrollbar-width: none; }
     .product-card { min-width: 150px; background: var(--secondary-beige); padding: 12px; border-radius: 16px; border: 1px solid rgba(250, 218, 221, 0.6); display: flex; flex-direction: column; gap: 6px; }
     .product-icon { font-size: 20px; color: var(--primary-dark); }
-    .product-name { font-weight: 600; font-size: 13px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .product-name { font-weight: 600; font-size: 13px; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
     .product-desc { font-size: 11px; color: var(--text-light); }
     .buy-btn { margin-top: auto; background: var(--white); border: 1px solid var(--primary-pink); padding: 6px; border-radius: 8px; font-size: 11px; font-weight: 600; color: var(--text-dark); text-decoration: none; text-align: center; }
 
@@ -187,8 +187,11 @@
     <!-- Home View -->
     <div class="home-view" id="homeView">
       <div class="header-top">
-        <div class="logo-text">GlowAI✨</div>
-        <i class="ri-user-smile-line profile-btn"></i>
+        <div class="logo-text">Glowina AI✨</div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <i class="ri-information-line profile-btn" onclick="showAbout()" title="About App"></i>
+          <i class="ri-user-smile-line profile-btn"></i>
+        </div>
       </div>
 
       <!-- NEW: Weather Integration -->
@@ -255,7 +258,7 @@
         <i class="ri-arrow-left-s-line back-btn" onclick="showHome()"></i>
         <div class="avatar"><i class="ri-sparkling-fill"></i></div>
         <div class="header-info">
-          <h3>GlowAI Expert</h3>
+          <h3>Glowina AI Expert</h3>
           <p>● Ready to analyze</p>
         </div>
       </div>
@@ -292,12 +295,31 @@
 
   </div>
 
+  <!-- About Modal -->
+  <div id="aboutModal" style="display: none; position: absolute; inset: 0; background: rgba(0,0,0,0.5); z-index: 100; justify-content: center; align-items: center; padding: 20px;">
+    <div style="background: white; width: 100%; max-width: 350px; border-radius: 20px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+      <h3 style="font-family: 'Outfit', sans-serif; margin-bottom: 12px; color: var(--primary-dark);">About Glowina AI</h3>
+      <p style="font-size: 14px; margin-bottom: 8px;"><strong>Version:</strong> 2.2</p>
+      <p style="font-size: 14px; margin-bottom: 8px;"><strong>What's New in v2.2:</strong></p>
+      <ul style="font-size: 13px; color: var(--text-light); margin-left: 20px; margin-bottom: 20px; line-height: 1.6;">
+        <li>Renamed project to Glowina AI</li>
+        <li>Added central About System & Version History</li>
+        <li>Integrated AI Suggestions and Bug Fixes</li>
+      </ul>
+      <button onclick="document.getElementById('aboutModal').style.display='none'" style="width: 100%; background: var(--primary-pink); border: none; padding: 12px; border-radius: 12px; font-weight: 600; cursor: pointer; color: var(--text-dark);">Close</button>
+    </div>
+  </div>
+
   <script>
     const homeView = document.getElementById('homeView');
     const chatView = document.getElementById('chatView');
     const chatbox = document.getElementById('chatbox');
     const typingIndicator = document.getElementById('typingIndicator');
     const scanOverlay = document.getElementById('scanOverlay');
+    
+    function showAbout() {
+      document.getElementById('aboutModal').style.display = 'flex';
+    }
     
     // Voice Recognition Implementation
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
