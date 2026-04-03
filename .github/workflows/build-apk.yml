@@ -31,6 +31,10 @@ jobs:
         working-directory: frontend
         run: flutter pub get
 
+      - name: 🏗️ Generate Android Platform Folder
+        working-directory: frontend
+        run: flutter create --platforms=android .
+
       - name: 🔨 Build Release APK
         working-directory: frontend
         run: flutter build apk --release
