@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:   # Allows manual trigger from GitHub UI
+  workflow_dispatch:
 
 jobs:
   build-apk:
@@ -30,14 +30,6 @@ jobs:
       - name: 📦 Install Dependencies
         working-directory: frontend
         run: flutter pub get
-
-      - name: 🏗️ Generate Android Platform Folder
-        working-directory: frontend
-        run: flutter create --platforms=android .
-
-      - name: 🎨 Generate App Icons
-        working-directory: frontend
-        run: dart run flutter_launcher_icons
 
       - name: 🔨 Build Release APK
         working-directory: frontend
