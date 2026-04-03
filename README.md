@@ -1,10 +1,14 @@
 <div align="center">
 
+<img src="logo/glowina_logo_icon.png" width="120" alt="Glowina AI Logo" style="border-radius:20px; margin-bottom:10px;" />
+
 <img src="https://readme-typing-svg.demolab.com?font=Outfit&weight=700&size=38&pause=1000&color=F0A8B1&center=true&vCenter=true&width=500&lines=✨+Glowina+AI;Your+Skin+Deserves+AI" alt="Glowina AI" />
 
 <p><b>Advanced AI-Powered Skincare Assistant — Mobile · Web · API</b></p>
 
 <p>
+  <a href="https://github.com/engrshuvodas/Glowina-AI/actions/workflows/build-apk.yml"><img src="https://github.com/engrshuvodas/Glowina-AI/actions/workflows/build-apk.yml/badge.svg" alt="Build APK Status" /></a>
+  <br/>
   <img src="https://img.shields.io/badge/Version-2.2-FFB6C1?style=for-the-badge&logoColor=white" />
   <img src="https://img.shields.io/badge/Flutter-3.0%2B-02569B?style=for-the-badge&logo=flutter&logoColor=white" />
   <img src="https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
@@ -163,7 +167,13 @@ flutter pub get
 flutter run
 ```
 
-> 📝 In `api_service.dart`, `baseUrl` is set to `http://10.0.2.2:5000` for Android Emulator. For iOS Simulator or Web, change to `http://localhost:5000`.
+> 📱 **Testing the APK on a Physical Android Device:**
+> - Make sure your PC and Phone are continuously connected to the **same Wi-Fi network**.
+> - Keep the Node.js backend server running on your PC.
+> - Ensure your Windows/Mac firewall allows incoming connections on port `5000`.
+> - If building locally, update `ApiService.baseUrl` inside the Flutter app to your PC's IP address (e.g., `http://192.168.1.3:5000`).
+
+> 📝 For Android Emulator, `baseUrl` should be `http://10.0.2.2:5000`. For iOS Simulator or Web, change to `http://localhost:5000`.
 
 ### Step 4 — Web Preview (No Setup Needed!)
 Simply open `web-preview/index.html` in your browser, or serve it:
@@ -181,6 +191,9 @@ python -m http.server 8080
 - ✅ Added **central About System** with in-app version display and changelog
 - ✅ About info icon added to both Flutter & Web app home screens
 - ✅ Backend AI prompt updated to new brand identity
+- 🚀 **GitHub Actions Automated APK Build** added
+- 🎨 Official **Glowina App Logo** set as Android App Icon
+- 🌐 Local physical device testing fix added (INTERNET and Cleartext Network permissions)
 
 ### v2.1 *(prior)*
 - ✅ AI Model upgraded to **Llama-3.3-70b-versatile** via **Groq Cloud**
