@@ -35,6 +35,10 @@ jobs:
         working-directory: frontend
         run: flutter create --platforms=android .
 
+      - name: 🎨 Generate App Icons
+        working-directory: frontend
+        run: dart run flutter_launcher_icons
+
       - name: 🔨 Build Release APK
         working-directory: frontend
         run: flutter build apk --release
